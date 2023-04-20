@@ -5,7 +5,7 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
-app.use(cors());
+app.use(cors()); //middlware
 app.use(router);
 
 const server = http.createServer(app);
